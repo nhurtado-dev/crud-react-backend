@@ -15,5 +15,6 @@ public class ProductoEntity {
     private String nombre;
     private int stock;
     private double precio;
+    private boolean estado;
 
 }
