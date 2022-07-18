@@ -26,7 +26,7 @@ public class Producto {
     private int stock;
 
     @Column(name = "precio")
-    private int precio;
+    private double precio;
 
     @Column(name = "estado")
     private boolean estado;
