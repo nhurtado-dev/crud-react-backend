@@ -10,26 +10,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "productos")
+@Table(name = "empleados")
 @Data
 
-public class Producto {
+public class Empleado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "nombre")
-    private String nombre;
+    @Column(name = "nombres")
+    private String nombres;
 
-    @Column(name = "stock")
-    private int stock;
+    @Column(name = "apellidos")
+    private String apellidos;
 
-    @Column(name = "precio")
-    private int precio;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "estado")
-    private boolean estado;
-
+    @Column(name = "contraseña")
+    private String contraseña;
 
 }

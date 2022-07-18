@@ -4,9 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.crud.demo.model.Empleado;
+import com.crud.demo.model.Producto;
 import com.crud.demo.services.EmpleadoService;
-import com.crud.demo.services.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,23 +18,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.crud.demo.model.Producto;
-
+import com.crud.demo.exception.ResourceNotFoundException;
+import com.crud.demo.model.Empleado;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/")
-public class ProductoController {
+public class EmpleadoController {
 
-	private final ProductoService productoService;
+    private final EmpleadoService empleadoService;
 
-	public ProductoController(ProductoService productoService) {
-		this.productoService = productoService;
-	}
+    public EmpleadoController(EmpleadoService empleadoService) {
+        this.empleadoService = empleadoService;
+    }
 
-	@PostMapping("/productos")
-	public Producto createProducto(@RequestBody Producto producto) {
-		return productoService.crearProducto(producto);
-	}
+    @PostMapping("/empleados")
+    public Empleado createEmpleado(@RequestBody Empleado empleado) {
+        return empleadoService.crearEmpleado(empleado);
+    }
 
 }
