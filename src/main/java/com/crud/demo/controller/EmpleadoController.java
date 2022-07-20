@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.crud.demo.exception.ResourceNotFoundException;
 import com.crud.demo.model.Empleado;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/")
 public class EmpleadoController {

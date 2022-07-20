@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.crud.demo.model.Producto;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/")
 public class ProductoController {
@@ -37,5 +37,6 @@ public class ProductoController {
 	public Producto createProducto(@RequestBody Producto producto) {
 		return productoService.crearProducto(producto);
 	}
+
 
 }
